@@ -1,0 +1,37 @@
+FROM ubuntu:22.04
+
+# Install Docker (DinD)
+RUN apt-get update && \
+    apt-get install -y \
+        docker.io \
+        python3 \
+        python3-pip \
+        python3-venv \
+        git \
+        build-essential \
+        cmake \
+        curl \
+        wget \
+        bash
+
+# Install Python dependencies
+COPY requirements.txt /tmp/
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /tmp/requirements.txt
+
+# Set up Docker daemon directory
+RUN mkdir -p /var/run/docker
+
+# Create a non-root user
+RUN useradd -m -s /bin/bash swefactory
+WORKDIR /app
+COPY . /app/
+RUN chown -R swefactory:swefactory /app
+
+# USER swefactory
+
+# Expose Docker daemon port (optional)
+EXPOSE 2375
+
+# Start Docker daemon in the background and keep the container alive
+CMD ["sh", "-c", "dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 & tail -f /dev/null"]

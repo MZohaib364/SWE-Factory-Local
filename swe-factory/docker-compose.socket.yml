@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  swe-factory-socket:
+    build:
+      context: .
+      dockerfile: Dockerfile.socket
+    container_name: swe-factory-socket
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      # Mount the host Docker socket
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount your data directories
+      - ./data_collection:/app/data_collection
+      - ./output:/app/output
+      - ./evaluation:/app/evaluation
+    networks:
+      - swe-factory-network
+    restart: unless-stopped
+
+networks:
+  swe-factory-network:
+    driver: bridge 

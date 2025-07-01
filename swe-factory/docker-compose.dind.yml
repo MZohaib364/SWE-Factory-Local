@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  swe-factory-dind:
+    build:
+      context: .
+      dockerfile: Dockerfile.dind
+    container_name: swe-factory-dind
+    privileged: true  # Required for Docker-in-Docker
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - PYTHONPATH=/app
+    volumes:
+      # Mount the host Docker socket (alternative approach)
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount your data directories
+      - ./data_collection:/app/data_collection
+      - ./output:/app/output
+      - ./evaluation:/app/evaluation
+      # Mount a shared volume for Docker images
+      - dind-storage:/var/lib/docker
+    ports:
+      - "2375:2375"  # Docker daemon port
+    networks:
+      - swe-factory-network
+    restart: unless-stopped
+
+volumes:
+  dind-storage:
+    driver: local
+
+networks:
+  swe-factory-network:
+    driver: bridge 

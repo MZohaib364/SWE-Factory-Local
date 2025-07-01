@@ -1,0 +1,43 @@
+{
+    "total_instances": 7,
+    "submitted_instances": 7,
+    "completed_instances": 7,
+    "resolved_instances": 7,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "unstopped_instances": 0,
+    "completed_ids": [
+        "catchorg__Catch2-1770_version-2.10",
+        "catchorg__Catch2-2058_version-3.0",
+        "catchorg__Catch2-2163_version-3.0",
+        "catchorg__Catch2-2427_version-3.0",
+        "catchorg__Catch2-2849_version-3.5",
+        "catchorg__Catch2-2919_version-3.7",
+        "catchorg__Catch2-2986_version-3.8"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "catchorg__Catch2-1770",
+        "catchorg__Catch2-2058",
+        "catchorg__Catch2-2163",
+        "catchorg__Catch2-2427",
+        "catchorg__Catch2-2849",
+        "catchorg__Catch2-2919",
+        "catchorg__Catch2-2986"
+    ],
+    "resolved_ids": [
+        "catchorg__Catch2-1770_version-2.10",
+        "catchorg__Catch2-2058_version-3.0",
+        "catchorg__Catch2-2163_version-3.0",
+        "catchorg__Catch2-2427_version-3.0",
+        "catchorg__Catch2-2849_version-3.5",
+        "catchorg__Catch2-2919_version-3.7",
+        "catchorg__Catch2-2986_version-3.8"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": []
+}

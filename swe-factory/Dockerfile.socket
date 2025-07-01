@@ -1,0 +1,35 @@
+# SWE-Factory with Docker socket mounting
+FROM python:3.10-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential \
+    cmake \
+    curl \
+    wget \
+    docker.io \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
+
+# Create a non-root user
+RUN useradd -m -s /bin/bash swefactory && \
+    usermod -aG docker swefactory
+
+# Set working directory
+WORKDIR /app
+
+# Copy the application code
+COPY . /app/
+
+# Change ownership to the user
+RUN chown -R swefactory:swefactory /app
+
+# Switch to non-root user
+USER swefactory
+
+# Default command
+CMD ["python3", "app/main.py"] 

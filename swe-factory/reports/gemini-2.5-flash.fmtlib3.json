@@ -1,0 +1,29 @@
+{
+    "total_instances": 3,
+    "submitted_instances": 5,
+    "completed_instances": 0,
+    "resolved_instances": 0,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 3,
+    "error_instances": 0,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "incomplete_ids": [],
+    "empty_patch_ids": [
+        "fmtlib__fmt-264_version-2.0",
+        "fmtlib__fmt-312_version-2.0",
+        "fmtlib__fmt-902_version-5.2"
+    ],
+    "submitted_ids": [
+        "fmtlib__fmt-1407",
+        "fmtlib__fmt-1663",
+        "fmtlib__fmt-264",
+        "fmtlib__fmt-312",
+        "fmtlib__fmt-902"
+    ],
+    "resolved_ids": [],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": []
+}

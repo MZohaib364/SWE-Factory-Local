@@ -1,0 +1,66 @@
+{
+    "total_instances": 15,
+    "submitted_instances": 13,
+    "completed_instances": 13,
+    "resolved_instances": 13,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "unstopped_instances": 1,
+    "completed_ids": [
+        "fmtlib__fmt-3913_version-10.2",
+        "fmtlib__fmt-3943_version-10.2",
+        "fmtlib__fmt-3951_version-10.2",
+        "fmtlib__fmt-4055_version-11.0",
+        "fmtlib__fmt-4056_version-11.0",
+        "fmtlib__fmt-4057_version-11.0",
+        "fmtlib__fmt-4286_version-11.1",
+        "fmtlib__fmt-4310_version-11.1",
+        "fmtlib__fmt-4325_version-11.1",
+        "fmtlib__fmt-4342_version-11.1",
+        "fmtlib__fmt-4361_version-11.1",
+        "fmtlib__fmt-4429_version-11.1",
+        "fmtlib__fmt-4474_version-11.2"
+    ],
+    "incomplete_ids": [
+        "fmtlib__fmt-4434_version-11.1",
+        "fmtlib__fmt-4443_version-11.2"
+    ],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "fmtlib__fmt-3913",
+        "fmtlib__fmt-3943",
+        "fmtlib__fmt-3951",
+        "fmtlib__fmt-4055",
+        "fmtlib__fmt-4056",
+        "fmtlib__fmt-4057",
+        "fmtlib__fmt-4286",
+        "fmtlib__fmt-4310",
+        "fmtlib__fmt-4325",
+        "fmtlib__fmt-4342",
+        "fmtlib__fmt-4361",
+        "fmtlib__fmt-4429",
+        "fmtlib__fmt-4474"
+    ],
+    "resolved_ids": [
+        "fmtlib__fmt-3913_version-10.2",
+        "fmtlib__fmt-3943_version-10.2",
+        "fmtlib__fmt-3951_version-10.2",
+        "fmtlib__fmt-4055_version-11.0",
+        "fmtlib__fmt-4056_version-11.0",
+        "fmtlib__fmt-4057_version-11.0",
+        "fmtlib__fmt-4286_version-11.1",
+        "fmtlib__fmt-4310_version-11.1",
+        "fmtlib__fmt-4325_version-11.1",
+        "fmtlib__fmt-4342_version-11.1",
+        "fmtlib__fmt-4361_version-11.1",
+        "fmtlib__fmt-4429_version-11.1",
+        "fmtlib__fmt-4474_version-11.2"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [
+        "fmtlib__fmt-3158-test1"
+    ],
+    "unremoved_images": []
+}
