@@ -9,16 +9,15 @@ services:
     privileged: true  # Required for Docker-in-Docker
     environment:
       - DOCKER_HOST=unix:///var/run/docker.sock
-      - PYTHONPATH=/app
+      - PYTHONPATH=/workspace
     volumes:
       # Mount the host Docker socket (alternative approach)
       - /var/run/docker.sock:/var/run/docker.sock
-      # Mount your data directories
-      - ./data_collection:/app/data_collection
-      - ./output:/app/output
-      - ./evaluation:/app/evaluation
+      # Mount the entire project directory
+      - ./:/workspace
       # Mount a shared volume for Docker images
       - dind-storage:/var/lib/docker
+    working_dir: /workspace
     ports:
       - "2375:2375"  # Docker daemon port
     networks:
